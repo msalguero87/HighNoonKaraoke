@@ -1,6 +1,6 @@
 
 var queryRoom = getParameterByName("room");
-//createRoom(queryRoom)
+createRoom(queryRoom)
 
 document.getElementById('title').innerHTML = "Saloon " + queryRoom;
 
