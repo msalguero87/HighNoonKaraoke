@@ -1,0 +1,91 @@
+body {
+  font-family: 'Rye', cursive !important;
+}
+
+h1{
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+video {
+  max-width: 100%;
+  width: 320px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("../images/sunset-background.jpg");
+  background-color: #cccccc;
+  height: 680px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 50%;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+}
+.btn-large{
+  background-color: #a66226 !important;
+  text-decoration: none;
+}
+
+.btn-small{
+  background-color: #a66226 !important;
+  text-decoration: none;
+}
+
+.btn-large:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-small:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.image-icons{
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+#canvas {
+	width: 50%;
+	height: 132px;
+	background: black;
+	margin: 10px auto 0px auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.range-field{
+  width: 30%;
+  margin: 0 auto;
+}
+
+#spinwheel {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.card{
+  height: 86%;
+}

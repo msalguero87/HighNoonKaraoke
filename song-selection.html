@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Karaoke Saloon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <div id="newSaloon" class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px" id="title">Song Selection</h1>
+      <p>
+        Now don't be such an old croaker and choose a good tune for our ears.
+      </p>
+      <div class="row">
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="http://img.youtube.com/vi/lXi-bJtfWCw/0.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Cattle Call</span>
+                    <p><a onclick="goToRoom('lXi-bJtfWCw')" style="color: #039be5;" >Tim to drive the herd buckaroo!</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="http://img.youtube.com/vi/0TWdc1BK5L0/0.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Streets of Laredo</span>
+                    <p><a onclick="goToRoom('0TWdc1BK5L0')" style="color: #039be5;" >Take me to Laredo!</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="http://img.youtube.com/vi/vpKl9_i-JC4/0.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Down in the valley</span>
+                    <p><a onclick="goToRoom('vpKl9_i-JC4')" style="color: #039be5;" >My heart is in the valley</a></p>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    var queryRoom = getParameterByName("room");
+
+    function goToRoom(videoId){
+        window.location.href = '/saloon.html?room='+queryRoom+"&video="+videoId;
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <div><a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a></div>
+  Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+</body>
+
+</html>

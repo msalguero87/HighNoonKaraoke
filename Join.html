@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Karaoke Saloon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <div id="joinSaloon" class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Join Saloon</h1>
+      <p>
+        Cool your heels in the pokey buckaroo! First give us the secret password to enter.
+      </p>
+      <div class="input-field col s6">
+        <input id="password" type="text" class="validate">
+        <label for="password">Password</label>
+      </div>
+      <a onclick="startJoiningRoom()" class="waves-effect waves-light btn-large" style="margin-bottom: 13px;"><img src="./images/horse.png" class="image-icons right"></i>Sadle your horses!</a>
+    </div>
+  </div>
+  
+  <script>
+    function startJoiningRoom(){
+      var element = document.getElementById('password');
+      if(!element.value) alert('Missing a secret password.');
+      else window.location.href = '/singer.html?room='+element.value;
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <div><a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a></div>
+  Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+</body>
+
+</html>

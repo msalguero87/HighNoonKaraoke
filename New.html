@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Karaoke Saloon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <div id="newSaloon" class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">New Saloon</h1>
+      <p>
+        Now choose a secret password for entrance to your saloon. You don't want those dang city slickers intruding on our games of poker.
+      </p>
+      <div class="input-field col s6">
+        <input id="password" type="text" class="validate">
+        <label for="password">Password</label>
+      </div>
+      <a onclick="startRoomCreation()" class="waves-effect waves-light btn-large" style="margin-bottom: 13px;"><img src="./images/leather-tools.png" class="image-icons right"></i>Buckle up!</a>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+      function startRoomCreation(){
+        var element = document.getElementById('password');
+        if(!element.value) alert('Missing a secret password.');
+        else window.location.href = '/song-selection.html?room='+element.value;
+      }
+  </script>
+  <div><a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a></div>
+  Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+</body>
+
+</html>

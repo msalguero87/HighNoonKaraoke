@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Karaoke Saloon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <div id="newSaloon" class="hero-image">
+    <div class="hero-text" style="width: 86%;">
+      <h1 style="font-size:50px" id="title">Saloon</h1>
+      <div class="row" style="margin-bottom: 13px;">
+        <div class="col s6">
+            <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/" onLoad="iframeFinishedLoading();" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col s6">
+            <div id="loader"  style="display: none;">
+                <br />
+                <div class="preloader-wrapper active">
+                    <div class="spinner-layer spinner-red-only">
+                        <div class="circle-clipper left">
+                        <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Waiting for a cowboy to join...</h3>
+                <img src="./images/outlaw128.png"></img> 
+            </div>
+            <div id="client-settings">
+                <div>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div>
+                    <label style="color: white;">Microphone Options</label>
+                    <br />
+                    <button class="waves-effect waves-light btn-small" onclick="document.getElementById('remoteAudio').play()">Open</button> 
+                    <button class="waves-effect waves-light btn-small" onclick="document.getElementById('remoteAudio').pause()">close</button>
+                    <p class="range-field">
+                        <label for="volumeControl" style="color: white;" >Volume:</label>
+                        <input type="range" id="volumeControl" min="0" max="100" value="100" onchange="changeVolume()" style="margin-top: 0px;" />
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--<div id="videos">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>-->
+
+  <audio id="remoteAudio" >
+    Your browser does not support the audio tag.
+  </audio> 
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="./js/connection-handler.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/equalizer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <div><a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a></div>
+  Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+</body>
+
+</html>
